@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  MenuMyWay
+//  MenuMyWay_1
 //
-//  Created by Irais Gopar osorio on 3/27/19.
-//  Copyright © 2019 Irais Gopar Osorio. All rights reserved.
+//  Created by Celina Juarez on 4/3/19.
+//  Copyright © 2019 Celina. All rights reserved.
 //
 
 import UIKit
