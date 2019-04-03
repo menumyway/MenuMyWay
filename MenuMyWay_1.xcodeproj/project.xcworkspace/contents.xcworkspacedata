@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MenuMyWay.xcodeproj">
+      location = "self:MenuMyWay_1.xcodeproj">
    </FileRef>
 </Workspace>
