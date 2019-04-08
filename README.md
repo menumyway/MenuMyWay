@@ -93,6 +93,13 @@ Evaluation of your app across the following attributes
 | Password    | string     |  unique password for user |
 | email       | string     |    unique email for user |
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+1. Login 
+⋅⋅* (Read/GET) Query logged in user object
+> if user wants to login check username and passwarod
+check if their unique ids match grant access to them
+else promt error and ask them to sing up 
+1. First ordered list item
+⋅⋅* Unordered sub-list. 
+1. First ordered list item
+⋅⋅* Unordered sub-list. 
