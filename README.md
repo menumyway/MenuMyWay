@@ -95,11 +95,12 @@ Evaluation of your app across the following attributes
 ### Networking
 
 1. Login 
-⋅⋅* (Read/GET) Query logged in user object
-> if user wants to login check username and passwarod
+* (Read/GET) Query logged in user object
+> if user wants to login check username and password
 check if their unique ids match grant access to them
 else promt error and ask them to sing up 
-1. First ordered list item
-⋅⋅* Unordered sub-list. 
-1. First ordered list item
+1. sign up
+* (Read/GET) Query sign up in user object 
+> if cant find username then sign up and make a new account
+1. 
 ⋅⋅* Unordered sub-list. 
