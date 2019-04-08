@@ -87,7 +87,11 @@ Evaluation of your app across the following attributes
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+| Property       | Type          | Description |
+| ------------- |:-------------:| -----:|
+| Username    | string | unique id for user |
+| Password    | string     |  unique password for user |
+| email       | string     |    unique email for user |
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
