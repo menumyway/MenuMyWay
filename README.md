@@ -102,4 +102,7 @@ else promt error and ask them to sing up
 * sign up Screen
   * (Read/GET) Query sign up in user object 
 > if cant find username then sign up and make a new account
+* search Screen
+  * (Read/GET) Query selected menu 
+> if menu is found then display to user
 
