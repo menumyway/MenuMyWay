@@ -94,13 +94,13 @@ Evaluation of your app across the following attributes
 | email       | string     |    unique email for user |
 ### Networking
 
-1. Login 
-* (Read/GET) Query logged in user object
+* Login 
+  * (Read/GET) Query logged in user object
 > if user wants to login check username and password
 check if their unique ids match grant access to them
 else promt error and ask them to sing up 
-1. sign up
-* (Read/GET) Query sign up in user object 
+* sign up
+  * (Read/GET) Query sign up in user object 
 > if cant find username then sign up and make a new account
-1. 
-⋅⋅* Unordered sub-list. 
+* 
+  * Unordered sub-list. 
