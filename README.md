@@ -106,3 +106,10 @@ else promt error and ask them to sing up
   * (Read/GET) Query selected menu 
 > if menu is found then display to user
 
+## Sprint 1
+
+- [x] User stays logged in across restarts.
+- [x] User can log out
+- [x] User can create a new account
+- [x] User can take a photo and text is retrieved and translated
+
