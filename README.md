@@ -107,7 +107,7 @@ else promt error and ask them to sing up
 > if menu is found then display to user
 
 ## Sprint 1
-
+- [x] User can take a photo
 - [x] Text is retrieved from the selected photo
 - [x] Text is translated to selected language
 
