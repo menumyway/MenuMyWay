@@ -6,5 +6,7 @@ target 'MenuMyWay_1' do
   use_frameworks!
 
   # Pods for MenuMyWay_1
-  pod 'Firebase/Core'
+    pod 'Firebase/Core' , '~> 5.2.0'
+    pod 'Firebase/MLVision', '~> 5.2.0'
+    pod 'Firebase/MLVisionTextModel', '~> 5.2.0'
 end
