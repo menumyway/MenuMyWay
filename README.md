@@ -111,7 +111,9 @@ else promt error and ask them to sing up
 - [x] User stays logged in across restarts.
 - [x] User can log out
 - [x] User can create a new account
-- [x] User can take a photo and text is retrieved and translated
+- [x] User can take a photo
+- [x] Text is retrieved from the selected photo
+- [x] Text is translated to selected language
 
 ## Video Walkthrough
 
