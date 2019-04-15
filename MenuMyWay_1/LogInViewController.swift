@@ -7,9 +7,45 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase 
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet weak var usernameField: UITextField!
+    
+    @IBOutlet weak var passwordField: UITextField!
+    
+    
+    
+    @IBAction func OnSignUp(_ sender: Any) {
+    }
+    
+    
+    @IBAction func onLogin(_ sender: Any) {
+        
+       
+        
+        
+if let email =  usernameField.text,let password = passwordField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                if error == nil {
+                    self.performSegue(withIdentifier: "SignIn", sender: nil)
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: password) { (user,error) in
+                        if (error != nil)  {
+                            print("cant sign in user")
+                        } else {
+                            self.performSegue(withIdentifier: "SignIn", sender: nil)
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

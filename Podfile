@@ -7,4 +7,11 @@ target 'MenuMyWay_1' do
 
   # Pods for MenuMyWay_1
   pod 'Firebase/Core'
+  pod 'FirebaseUI'
+  pod 'Firebase/Database'
+  pod 'FirebaseUI/Auth'
+  pod 'KeychainSwift'
+  
+  pod 'FirebaseUI/Google'
+
 end
