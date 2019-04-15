@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lq-gj-MXw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tqM-Pa-84a">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,20 +10,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="Dmr-jR-Phq">
             <objects>
-                <viewController id="ZfP-v9-muX" customClass="ViewController" customModule="MenuMyWay_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZfP-v9-muX" customClass="LogInViewController" customModule="MenuMyWay_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KTY-w0-Hph">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-3h-5Cg" userLabel="LoginButton">
-                                <rect key="frame" x="16" y="368" width="54" height="30"/>
+                                <rect key="frame" x="16" y="368" width="54" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="brc-tV-0eT" kind="presentation" id="h54-Vh-XnA"/>
+                                    <action selector="onSignup:" destination="ZfP-v9-muX" eventType="touchUpInside" id="DhR-Ph-4d9"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEx-8D-1zu" userLabel="passwordField">
@@ -66,20 +66,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="SignUp"/>
                                 <connections>
-                                    <segue destination="Veh-4j-w0w" kind="presentation" id="wo1-WW-CPd"/>
+                                    <segue destination="Veh-4j-w0w" kind="show" identifier="SignUp" id="wo1-WW-CPd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="yKn-wK-N49"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BRc-Li-TSf"/>
                     <connections>
-                        <segue destination="myS-1z-Bsl" kind="presentation" id="V5f-8z-94X"/>
+                        <outlet property="emailField" destination="Ss0-8l-eeI" id="ahm-5n-pBk"/>
+                        <outlet property="passwordField" destination="aEx-8D-1zu" id="rOA-0J-LXu"/>
+                        <segue destination="brc-tV-0eT" kind="show" identifier="SignIn" id="pUf-HV-EpD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xT3-dL-m15" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1140" y="50.70422535211268"/>
+            <point key="canvasLocation" x="-142.5" y="50.70422535211268"/>
         </scene>
         <!--Title-->
         <scene sceneID="61L-af-EJ4">
@@ -315,26 +318,10 @@
             </objects>
             <point key="canvasLocation" x="990" y="1806"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="0jB-ub-6j3">
-            <objects>
-                <navigationController id="myS-1z-Bsl" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wy2-9B-SKT">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Veh-4j-w0w" kind="relationship" relationship="rootViewController" id="tQg-LF-1fz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xJl-Z6-iSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-338" y="-1056"/>
-        </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="k1s-Cf-bwf">
             <objects>
-                <viewController id="Veh-4j-w0w" sceneMemberID="viewController">
+                <viewController id="Veh-4j-w0w" customClass="SignUpViewController" customModule="MenuMyWay_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5tt-LA-SSF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -382,11 +369,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV0-2R-MA5">
-                                <rect key="frame" x="135" y="371" width="50" height="30"/>
+                                <rect key="frame" x="135" y="401" width="50" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="sign up"/>
                                 <connections>
-                                    <segue destination="brc-tV-0eT" kind="presentation" id="9r7-Fs-Ilw"/>
+                                    <action selector="onSignup:" destination="Veh-4j-w0w" eventType="touchUpInside" id="0Or-aR-HYg"/>
+                                    <segue destination="brc-tV-0eT" kind="presentation" identifier="SignUp" id="9r7-Fs-Ilw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SignUp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ4-bJ-pjk">
@@ -401,10 +389,33 @@
                         <viewLayoutGuide key="safeArea" id="l1e-kg-bGt"/>
                     </view>
                     <navigationItem key="navigationItem" id="cWJ-Ci-IG8"/>
+                    <connections>
+                        <outlet property="emailField" destination="yYE-1T-2OY" id="cea-mD-ffO"/>
+                        <outlet property="passwordField" destination="S5Q-cn-4zE" id="G8u-9d-pcu"/>
+                        <outlet property="usernameField" destination="JDD-5O-ZcP" id="0hO-pj-wt1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fo6-Fa-vo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="496.875" y="50.70422535211268"/>
+            <point key="canvasLocation" x="699" y="51"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vjz-aw-a0q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tqM-Pa-84a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HVP-m8-cFK">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZfP-v9-muX" kind="relationship" relationship="rootViewController" id="jDH-BD-E2d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pzf-1I-eUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-956" y="51"/>
         </scene>
     </scenes>
     <resources>
@@ -415,10 +426,9 @@
         <image name="search_icon" width="400.07998657226562" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wo1-WW-CPd"/>
-        <segue reference="zWe-Ld-hnX"/>
-        <segue reference="Q3x-9Y-nPi"/>
-        <segue reference="2f5-sT-825"/>
-        <segue reference="fBK-4C-hGN"/>
+        <segue reference="0uY-hU-doT"/>
+        <segue reference="9r7-Fs-Ilw"/>
+        <segue reference="2ZH-eA-M2D"/>
+        <segue reference="pY6-jy-0jc"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,4 +9,8 @@ target 'MenuMyWay_1' do
     pod 'Firebase/Core' , '~> 5.2.0'
     pod 'Firebase/MLVision', '~> 5.2.0'
     pod 'Firebase/MLVisionTextModel', '~> 5.2.0'
+    pod 'FirebaseUI'
+    pod 'Firebase/Database'
+    pod 'FirebaseUI/Auth'
+    pod 'KeychainSwift'
 end
