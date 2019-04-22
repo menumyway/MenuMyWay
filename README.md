@@ -125,6 +125,6 @@ Here's a walkthrough of implemented user stories:
 <img src='https://media.giphy.com/media/RiWnjc1EXXbY7l6IRb/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='https://media.giphy.com/media/iI4JDhZcIPqIzehXYi/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src='https://imgur.com/a/5PmhoUm' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 
