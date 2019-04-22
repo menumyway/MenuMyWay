@@ -123,3 +123,7 @@ Here's a walkthrough of implemented user stories:
 - [x] User can search for a menu
 
 <img src='https://media.giphy.com/media/RiWnjc1EXXbY7l6IRb/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/iI4JDhZcIPqIzehXYi/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/5PmhoUm"><a href="//imgur.com/5PmhoUm"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
