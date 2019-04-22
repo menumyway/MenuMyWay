@@ -20,7 +20,7 @@ class SavedViewController: UIViewController {
     
 
     @IBAction func PlacesButton(_ sender: Any) {
-        let jsonString = "https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=DARACO2EGHSLMEKBKUAHPYUVW1J4HDJDOMKNW5CKRHILDWG1&client_secret=TR5QAKFNF43WDZ24YW1QTVN3LN45B1KEOPQX5TFO5J4ZF3SD&v=20190417"
+        let jsonString = "https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=&client_secret=&v=20190417"
         
         guard let url = URL(string: jsonString) else {
             return
