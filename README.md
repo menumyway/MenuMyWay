@@ -107,8 +107,7 @@ else promt error and ask them to sing up
 > if menu is found then display to user
 
 ## Sprint 1
-- [ ] create new accounts
-- [ ] User can take a photo
+- [x] User can take a photo
 - [x] Text is retrieved from the selected photo
 - [x] Text is translated to selected language
 
@@ -117,3 +116,15 @@ else promt error and ask them to sing up
 Here's a walkthrough of implemented user stories:
 
 <img src='https://media.giphy.com/media/Vzw2HOIALQ8wOU07OB/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+## Sprint 2
+- [x] User can create an account
+- [x] User can login and logout
+- [ ] User can search for a menu
+
+<img src='https://media.giphy.com/media/RiWnjc1EXXbY7l6IRb/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/iI4JDhZcIPqIzehXYi/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
+
+
