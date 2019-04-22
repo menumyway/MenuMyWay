@@ -125,6 +125,13 @@ Here's a walkthrough of implemented user stories:
 <img src='https://media.giphy.com/media/RiWnjc1EXXbY7l6IRb/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='https://media.giphy.com/media/iI4JDhZcIPqIzehXYi/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+## Sprint 3
+- [x] User can't login with invalid credentials
+- [ ] User can exchange their currency
+
+<img src='https://media.giphy.com/media/RiWnjc1EXXbY7l6IRb/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/iI4JDhZcIPqIzehXYi/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 
 
