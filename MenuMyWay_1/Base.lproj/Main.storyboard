@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lq-gj-MXw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lq-gj-MXw">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,13 +54,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvI-RP-Eqb" userLabel="LoginLabel">
-                                <rect key="frame" x="164" y="92" width="46" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sZ-7P-xWt" userLabel="SignUpButton">
                                 <rect key="frame" x="212" y="368" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -69,6 +62,13 @@
                                     <segue destination="Veh-4j-w0w" kind="presentation" id="wo1-WW-CPd"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6io-EO-Nyf">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Login" id="iab-Ec-FvR"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="yKn-wK-N49"/>
@@ -105,44 +105,61 @@
                                     <segue destination="az1-vQ-Bh7" kind="presentation" id="2f5-sT-825"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="449-Qt-2Td">
-                                <rect key="frame" x="123" y="518" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="449-Qt-2Td">
+                                <rect key="frame" x="123.5" y="518" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <segue destination="TaD-Aw-aNF" kind="presentation" id="zWe-Ld-hnX"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lga-go-ZoK">
-                                <rect key="frame" x="0.0" y="20" width="320" height="117"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lga-go-ZoK">
+                                <rect key="frame" x="0.0" y="20" width="320" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0xW-es-nur"/>
                                 </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detected Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtm-1j-OVT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detected Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtm-1j-OVT">
                                 <rect key="frame" x="16" y="178" width="288" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Translated Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ix3-TQ-ZqI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translated Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ix3-TQ-ZqI">
                                 <rect key="frame" x="16" y="243" width="288" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="rMg-p6-ZoH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="4as-v3-UFd">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="4as-v3-UFd">
                                 <rect key="frame" x="110" y="387" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Fcj-Kb-nwB"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="8b8-mK-mDo" appends="YES" id="NFN-ml-yUG"/>
                                 </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ix3-TQ-ZqI" firstAttribute="centerY" secondItem="xrh-K0-QWo" secondAttribute="centerY" id="1lf-Bn-R6z"/>
+                            <constraint firstItem="lga-go-ZoK" firstAttribute="leading" secondItem="xrh-K0-QWo" secondAttribute="leading" id="3Fn-YD-oVU"/>
+                            <constraint firstItem="Ix3-TQ-ZqI" firstAttribute="leading" secondItem="xrh-K0-QWo" secondAttribute="leadingMargin" id="87u-1K-cgM"/>
+                            <constraint firstItem="449-Qt-2Td" firstAttribute="top" secondItem="4as-v3-UFd" secondAttribute="bottom" constant="61" id="EUU-gj-SIw"/>
+                            <constraint firstItem="lga-go-ZoK" firstAttribute="centerX" secondItem="Wtm-1j-OVT" secondAttribute="centerX" id="IOU-T7-mJs"/>
+                            <constraint firstItem="4as-v3-UFd" firstAttribute="top" secondItem="Ix3-TQ-ZqI" secondAttribute="bottom" constant="62" id="Jdh-xY-oee"/>
+                            <constraint firstItem="NMM-bF-fyI" firstAttribute="trailing" secondItem="4as-v3-UFd" secondAttribute="trailing" constant="135" id="Umh-h6-vUQ"/>
+                            <constraint firstItem="Wtm-1j-OVT" firstAttribute="top" secondItem="lga-go-ZoK" secondAttribute="bottom" constant="41" id="cTg-M1-6PO"/>
+                            <constraint firstItem="4as-v3-UFd" firstAttribute="centerX" secondItem="449-Qt-2Td" secondAttribute="centerX" id="odu-rO-zKp"/>
+                            <constraint firstItem="Ix3-TQ-ZqI" firstAttribute="leading" secondItem="Wtm-1j-OVT" secondAttribute="leading" id="uAO-Zu-fe5"/>
+                            <constraint firstItem="4as-v3-UFd" firstAttribute="leading" secondItem="NMM-bF-fyI" secondAttribute="leading" constant="110" id="uE2-T1-D0z"/>
+                            <constraint firstItem="lga-go-ZoK" firstAttribute="top" secondItem="NMM-bF-fyI" secondAttribute="top" id="vjb-iY-DvO"/>
+                            <constraint firstItem="lga-go-ZoK" firstAttribute="centerX" secondItem="Ix3-TQ-ZqI" secondAttribute="centerX" id="ysz-X8-o0W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NMM-bF-fyI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="nI3-0b-yzh"/>
@@ -162,21 +179,14 @@
             </objects>
             <point key="canvasLocation" x="-1764.375" y="1805.2816901408451"/>
         </scene>
-        <!--View Controller-->
+        <!--Saved View Controller-->
         <scene sceneID="VBf-kY-VEm">
             <objects>
-                <viewController id="az1-vQ-Bh7" sceneMemberID="viewController">
+                <viewController id="az1-vQ-Bh7" customClass="SavedViewController" customModule="MenuMyWay_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IKA-bR-X4N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-GW-3pP" userLabel="SaveLabel">
-                                <rect key="frame" x="142" y="48" width="37" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugr-87-ahf" userLabel="HomeButton">
                                 <rect key="frame" x="16" y="496" width="56" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -188,7 +198,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3p-pr-enp" userLabel="CameraButton">
-                                <rect key="frame" x="97" y="496" width="53" height="52"/>
+                                <rect key="frame" x="97" y="496" width="56" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="camera_icon"/>
                                 <connections>
@@ -196,18 +206,33 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9z-hW-g24" userLabel="SaveButton">
-                                <rect key="frame" x="250" y="496" width="54" height="52"/>
+                                <rect key="frame" x="250" y="496" width="56" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="save_icon"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7C-Gg-oQm" userLabel="SearchButton">
-                                <rect key="frame" x="172" y="496" width="55" height="52"/>
+                                <rect key="frame" x="172" y="496" width="56" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search" image="search_icon"/>
                                 <connections>
                                     <segue destination="TaD-Aw-aNF" kind="presentation" id="zvQ-eG-LJM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-tS-4MV">
+                                <rect key="frame" x="134" y="161" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Places?"/>
+                                <connections>
+                                    <action selector="PlacesButton:" destination="az1-vQ-Bh7" eventType="touchUpInside" id="YG5-o5-KP3"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zxf-Jz-f39">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Save" id="rld-XM-85m"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ELx-Cd-ayD"/>
@@ -225,13 +250,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gj-IJ-hmc">
-                                <rect key="frame" x="139" y="47" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFE-u1-UPb">
                                 <rect key="frame" x="136" y="160" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -256,6 +274,13 @@
                                     <segue destination="2lq-gj-MXw" kind="presentation" id="pY6-jy-0jc"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ihl-n3-Sjf">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Home" id="25L-SG-Ebr"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="y9J-9L-fjC"/>
@@ -269,7 +294,7 @@
         <!--Title-->
         <scene sceneID="9Nn-jv-o8T">
             <objects>
-                <viewController id="TaD-Aw-aNF" sceneMemberID="viewController">
+                <viewController id="TaD-Aw-aNF" customClass="SearchViewController" customModule="MenuMyWay_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cyk-Ho-f9k">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,39 +306,68 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87R-jw-gB5">
-                                <rect key="frame" x="140" y="155" width="41" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87R-jw-gB5">
+                                <rect key="frame" x="16" y="496" width="56" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Home"/>
+                                <state key="normal" title="Home" image="home_icon"/>
                                 <connections>
                                     <segue destination="brc-tV-0eT" kind="presentation" id="ZmA-Ze-3wy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTN-Cl-Qph">
-                                <rect key="frame" x="133" y="193" width="55" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTN-Cl-Qph">
+                                <rect key="frame" x="97" y="496" width="56" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Capture"/>
+                                <state key="normal" title="Capture" image="camera_icon"/>
                                 <connections>
                                     <segue destination="2lq-gj-MXw" kind="presentation" id="koK-FU-U43"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hU-lj-L9c">
-                                <rect key="frame" x="140" y="231" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hU-lj-L9c">
+                                <rect key="frame" x="250" y="496" width="56" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Save" image="save_icon"/>
                                 <connections>
                                     <segue destination="az1-vQ-Bh7" kind="presentation" id="cZs-JH-WoE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vf-R6-9An">
+                                <rect key="frame" x="172" y="496" width="56" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search" image="search_icon"/>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROB-Kp-gzJ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Search" id="Qg1-cv-WbP"/>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uty-2X-xDy">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="5FW-4Y-Mrk"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ICB-sq-3k8" appends="YES" id="4he-AK-5le"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="uXW-Wl-krh"/>
+                    <connections>
+                        <outlet property="searchVenue" destination="Uty-2X-xDy" id="7TD-e9-fYf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPY-KZ-enu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ICB-sq-3k8">
+                    <connections>
+                        <action selector="tapScreen:" destination="TaD-Aw-aNF" id="wva-uB-Up4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="990" y="1806"/>
+            <point key="canvasLocation" x="990" y="1805.2816901408451"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0jB-ub-6j3">
@@ -389,13 +443,13 @@
                                     <segue destination="brc-tV-0eT" kind="presentation" id="9r7-Fs-Ilw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SignUp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ4-bJ-pjk">
-                                <rect key="frame" x="132" y="69" width="56" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpl-si-Q6V">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Sign Up" id="RAv-lK-3sJ"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="l1e-kg-bGt"/>
@@ -412,13 +466,13 @@
         <image name="home_icon" width="256" height="256"/>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="save_icon" width="512" height="512"/>
-        <image name="search_icon" width="400.07998657226562" height="300"/>
+        <image name="search_icon" width="1667" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wo1-WW-CPd"/>
-        <segue reference="zWe-Ld-hnX"/>
-        <segue reference="Q3x-9Y-nPi"/>
-        <segue reference="2f5-sT-825"/>
-        <segue reference="fBK-4C-hGN"/>
+        <segue reference="zvQ-eG-LJM"/>
+        <segue reference="9r7-Fs-Ilw"/>
+        <segue reference="cZs-JH-WoE"/>
+        <segue reference="koK-FU-U43"/>
     </inferredMetricsTieBreakers>
 </document>

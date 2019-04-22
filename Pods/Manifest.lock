@@ -29,6 +29,7 @@ PODS:
     - GoogleMobileVision/Detector (~> 1.3.0)
   - FirebaseMLVisionTextModel (0.9.0):
     - GoogleMobileVision/TextDetector (~> 1.3.0)
+  - FoursquareAPIClient (5.0.1)
   - GoogleAPIClientForREST/Core (1.3.8):
     - GTMSessionFetcher (>= 1.1.7)
   - GoogleAPIClientForREST/Vision (1.3.8):
@@ -56,12 +57,15 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Pilgrim (2.1.2)
   - Protobuf (3.6.1)
 
 DEPENDENCIES:
   - Firebase/Core (~> 5.2.0)
   - Firebase/MLVision (~> 5.2.0)
   - Firebase/MLVisionTextModel (~> 5.2.0)
+  - FoursquareAPIClient
+  - Pilgrim (~> 2.1.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -72,11 +76,13 @@ SPEC REPOS:
     - FirebaseMLCommon
     - FirebaseMLVision
     - FirebaseMLVisionTextModel
+    - FoursquareAPIClient
     - GoogleAPIClientForREST
     - GoogleMobileVision
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - nanopb
+    - Pilgrim
     - Protobuf
 
 SPEC CHECKSUMS:
@@ -87,13 +93,15 @@ SPEC CHECKSUMS:
   FirebaseMLCommon: 88ffed2dbb54ecb7dbcf8080a7654b6ea938e15b
   FirebaseMLVision: f9756d8376dd150fb17629eaa7bdc6baa8965677
   FirebaseMLVisionTextModel: 8a9cb61296d4d15d60eb0c7c66a2a88790b34376
+  FoursquareAPIClient: 83c932298e905634e0c0cce90e3f1d6897c7a7a9
   GoogleAPIClientForREST: 5447a194eae517986cafe6421a5330b80b820591
   GoogleMobileVision: 7e0eeac8d897ac1f9a4f9d55d3d2df81325f92ec
   GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Pilgrim: 108b808e58751b49de1281404fc3f200a5b9d77e
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: 08a67456350a7bc12c4d483715f99ddd5d1d0e54
+PODFILE CHECKSUM: 3242c01bd3c7d4edea3e679cb33fb29c47f2c361
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.5.3
