@@ -118,6 +118,8 @@ Here's a walkthrough of implemented user stories:
 <img src='https://media.giphy.com/media/Vzw2HOIALQ8wOU07OB/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Sprint 2
-- [ ] User can create an account
-- [ ] User can login and logout
-- [ ] User can search for a menu
+- [x] User can create an account
+- [x] User can login and logout
+- [x] User can search for a menu
+
+<img src='https://media.giphy.com/media/RiWnjc1EXXbY7l6IRb/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
