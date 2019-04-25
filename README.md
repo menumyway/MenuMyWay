@@ -127,10 +127,11 @@ Here's a walkthrough of implemented user stories:
 
 ## Sprint 3
 - [x] User can't login with invalid credentials
-- [ ] User can exchange their currency
+- [x] User can exchange EUR to other currency options
 
 <img src='https://media.giphy.com/media/RiWnjc1EXXbY7l6IRb/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='https://media.giphy.com/media/iI4JDhZcIPqIzehXYi/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/h6ZPAJbrqFx5aFSCmr/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 
