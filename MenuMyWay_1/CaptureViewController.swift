@@ -9,7 +9,23 @@
 import UIKit
 import Firebase
 
-class CaptureViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class CaptureViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return languages.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return languages[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        targetCode = languageCodes[row]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,25 +108,5 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         })
         
         task?.resume()
-    }
-}
-
-// MARK :- UIPickerViewDelegate
-extension CaptureViewController: UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return languages.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return languages[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        targetCode = languageCodes[row]
     }
 }
