@@ -7,43 +7,70 @@
 //
 
 import UIKit
-import Pilgrim
-import FoursquareAPIClient
 
-class SavedViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class SavedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return currencyType.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return currencyType[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currentCurr = currencyValue[row]
     }
     
 
-    @IBAction func PlacesButton(_ sender: Any) {
-        let jsonString = "https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=&client_secret=&v=20190417"
+    var currencyValue:[Double] = []
+    var currencyType:[String] = ["EUR","GBP","MXN", "USD"]
+    var currentCurr = 0.0
+    
+    @IBOutlet weak var currentCurrencyField: UITextField!
+    @IBOutlet weak var currencyPicker: UIPickerView!
+    @IBOutlet weak var resultCurrencyField: UITextField!
+    
+    
+    override func viewDidLoad() {
         
-        guard let url = URL(string: jsonString) else {
-            return
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        let url  = URL(string: "http://data.fixer.io/api/latest?access_key=9935bfc59303dcd6030f9e32a4f5de4e")
+        
+        let task = URLSession.shared.dataTask(with: url!) { (data,response,error) in
+            if error != nil{
+                print("Error")
+            } else {
+                if let content = data {
+                    do {
+                        let myJson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                        if let rates = myJson["rates"] as? NSDictionary {
+                            for(key, value) in rates {
+                                for curr in self.currencyType {
+                                    if curr == key as! String {
+                                        self.currencyValue.append((value as! Double))
+                                    }
+                                }
+                            }
+                            print(self.currencyValue)
+                            print(self.currencyType)
+                        }
+                    }catch {
+                        
+                    }
+                }
+            }
+            self.currencyPicker.delegate = self
         }
-        
-        URLSession.shared.dataTask(with: url){ (data, response, err) in
-            
-            guard let data = data else {return}
-            let dataAsString = String(data: data, encoding: .utf8)
-            print("hello")
-            print (dataAsString)
-            
-            
-        }.resume()
+        task.resume()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func onConvertBtn(_ sender: Any) {
+        if(currentCurrencyField.text != ""){
+            resultCurrencyField.text = String(Double(currentCurrencyField.text!)! * currentCurr)
+        }
     }
-    */
-
+    
 }
