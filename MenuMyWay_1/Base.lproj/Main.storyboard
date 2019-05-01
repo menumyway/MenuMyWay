@@ -175,43 +175,44 @@
                                     <navigationItem title="Save" id="rld-XM-85m"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtn-7d-2HA">
-                                <rect key="frame" x="133" y="352" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Convert"/>
-                                <connections>
-                                    <action selector="onConvertBtn:" destination="az1-vQ-Bh7" eventType="touchUpInside" id="ckg-JZ-gxx"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EUR" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPT-Sf-qz8">
-                                <rect key="frame" x="129" y="145" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zlG-aD-WJM">
-                                <rect key="frame" x="0.0" y="207" width="320" height="88"/>
+                                <rect key="frame" x="150" y="113" width="154" height="62"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="az1-vQ-Bh7" id="Wr9-QZ-8G4"/>
                                     <outlet property="delegate" destination="az1-vQ-Bh7" id="b0N-BA-Nen"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EUR" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jog-5I-yT9">
-                                <rect key="frame" x="117" y="145" width="86" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rbT-vM-aLN">
+                                <rect key="frame" x="16" y="233" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Results" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rbT-vM-aLN">
-                                <rect key="frame" x="117" y="426" width="86" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jog-5I-yT9">
+                                <rect key="frame" x="16" y="129" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7hR-sK-jjR">
+                                <rect key="frame" x="150" y="217" width="154" height="62"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="az1-vQ-Bh7" id="bVo-dt-ge1"/>
+                                    <outlet property="delegate" destination="az1-vQ-Bh7" id="I0X-g3-Lby"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtn-7d-2HA">
+                                <rect key="frame" x="133" y="316" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="onConvertBtn:" destination="az1-vQ-Bh7" eventType="touchUpInside" id="ckg-JZ-gxx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ELx-Cd-ayD"/>
@@ -219,6 +220,7 @@
                     <tabBarItem key="tabBarItem" title="" image="icons8-exchange-50" selectedImage="icons8-exchange-50" id="5G5-ec-V82"/>
                     <connections>
                         <outlet property="currencyPicker" destination="zlG-aD-WJM" id="iCV-DZ-Z1O"/>
+                        <outlet property="currencyPicker2" destination="7hR-sK-jjR" id="fgc-ea-9jP"/>
                         <outlet property="currentCurrencyField" destination="Jog-5I-yT9" id="gNv-1z-iGR"/>
                         <outlet property="resultCurrencyField" destination="rbT-vM-aLN" id="2NE-Qa-gkJ"/>
                     </connections>
