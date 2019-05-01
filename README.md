@@ -135,6 +135,13 @@ Here's a walkthrough of implemented user stories:
 <img src='https://media.giphy.com/media/iI4JDhZcIPqIzehXYi/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='https://media.giphy.com/media/h6ZPAJbrqFx5aFSCmr/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+## Sprint 4
+- [x] User can search for a menu
+- [x] User can exchange currency 
+
+
+<img src='https://media.giphy.com/media/XDMAtyJ3LADpDJ6XJ8/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 
 
