@@ -52,7 +52,7 @@ class SavedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let url  = URL(string: "http://data.fixer.io/api/latest?access_key=9935bfc59303dcd6030f9e32a4f5de4e")
+        let url  = URL(string: "http://data.fixer.io/api/latest?access_key=")
         
         let task = URLSession.shared.dataTask(with: url!) { (data,response,error) in
             if error != nil{
