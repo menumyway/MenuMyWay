@@ -109,41 +109,69 @@
             <objects>
                 <viewController id="2lq-gj-MXw" customClass="CaptureViewController" customModule="MenuMyWay_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xrh-K0-QWo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lga-go-ZoK">
-                                <rect key="frame" x="0.0" y="186" width="320" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detected Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtm-1j-OVT">
-                                <rect key="frame" x="16" y="322" width="288" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Translated Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ix3-TQ-ZqI">
-                                <rect key="frame" x="16" y="432" width="288" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="4as-v3-UFd">
-                                <rect key="frame" x="112" y="50" width="96" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="8b8-mK-mDo" appends="YES" id="NFN-ml-yUG"/>
-                                </connections>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7S-Lu-7jA">
+                                <rect key="frame" x="0.0" y="64" width="320" height="887"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UrJ-eO-bby">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detected Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtm-1j-OVT">
+                                                <rect key="frame" x="0.0" y="300" width="288" height="82"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Translated Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ix3-TQ-ZqI">
+                                                <rect key="frame" x="0.0" y="404" width="288" height="20.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lga-go-ZoK">
+                                                <rect key="frame" x="0.0" y="179" width="320" height="69"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="4as-v3-UFd">
+                                                <rect key="frame" x="112" y="8" width="96" height="96"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="8b8-mK-mDo" appends="YES" id="NFN-ml-yUG"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="AOK-XH-d57"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="UrJ-eO-bby" secondAttribute="bottom" id="8UA-dk-TSw"/>
+                                    <constraint firstItem="UrJ-eO-bby" firstAttribute="leading" secondItem="j7S-Lu-7jA" secondAttribute="leading" id="RtF-nY-6fx"/>
+                                    <constraint firstItem="UrJ-eO-bby" firstAttribute="top" secondItem="j7S-Lu-7jA" secondAttribute="top" id="fZl-5K-57d"/>
+                                    <constraint firstAttribute="trailing" secondItem="UrJ-eO-bby" secondAttribute="trailing" id="i41-TG-7HQ"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j7S-Lu-7jA" firstAttribute="leading" secondItem="NMM-bF-fyI" secondAttribute="leading" id="GzE-Je-Ay6"/>
+                            <constraint firstItem="UrJ-eO-bby" firstAttribute="width" secondItem="xrh-K0-QWo" secondAttribute="width" id="Op2-F2-9De"/>
+                            <constraint firstItem="j7S-Lu-7jA" firstAttribute="trailing" secondItem="NMM-bF-fyI" secondAttribute="trailing" id="Tyc-Bv-5Kl"/>
+                            <constraint firstItem="j7S-Lu-7jA" firstAttribute="bottom" secondItem="NMM-bF-fyI" secondAttribute="bottom" id="oQx-SV-nqg"/>
+                            <constraint firstItem="j7S-Lu-7jA" firstAttribute="top" secondItem="NMM-bF-fyI" secondAttribute="top" id="qb9-8C-5bq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NMM-bF-fyI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icons8-unsplash-50" selectedImage="icons8-unsplash-50" id="tjR-v0-X2m"/>
                     <navigationItem key="navigationItem" title="Title" id="nI3-0b-yzh"/>
+                    <size key="freeformSize" width="320" height="1000"/>
                     <connections>
                         <outlet property="detectedLabel" destination="Wtm-1j-OVT" id="vAw-6C-QY0"/>
                         <outlet property="imageView" destination="4as-v3-UFd" id="5uD-qG-vZI"/>
