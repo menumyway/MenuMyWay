@@ -138,9 +138,14 @@ Here's a walkthrough of implemented user stories:
 ## Sprint 4
 - [x] User can search for a menu
 - [x] User can exchange currency 
+- [x] User can't login with invalid credentials
 
 
 <img src='https://media.giphy.com/media/XDMAtyJ3LADpDJ6XJ8/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src='https://media.giphy.com/media/WQlzDbzwdnVrefrR9l/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
 
 
 
