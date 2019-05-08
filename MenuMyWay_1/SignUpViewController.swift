@@ -15,7 +15,6 @@ class SignUpViewController: UIViewController {
 
     
     
-    @IBOutlet weak var emailField: UITextField!
     
     
     
@@ -29,7 +28,7 @@ class SignUpViewController: UIViewController {
     @IBAction func onSignup(_ sender: Any) {
         
         
-        let email = emailField.text
+        let email = usernameField.text
         let password = passwordField.text
         
         Auth.auth().createUser(withEmail: email!, password: password!) { (user,error) in

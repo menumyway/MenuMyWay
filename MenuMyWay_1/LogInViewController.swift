@@ -28,9 +28,20 @@ class LogInViewController: UIViewController {
                 if error == nil {
                     self.performSegue(withIdentifier: "SignIn", sender: nil)
                 } else {
-                    print ("error!")
+                    let alert = UIAlertController(title: "ERROR" , message: "Could not find account", preferredStyle: .alert)
+                    
+                    let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                    
+                    alert.addAction(okButton)
+                    self.present(alert,animated:true, completion:nil)
+                    
                 }
             }
+        }
+        
+        func sub(alert: UIAlertAction)
+        {
+            print("Error")
         }
     
     }

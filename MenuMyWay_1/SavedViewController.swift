@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SavedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -51,6 +52,7 @@ class SavedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: true)
         // Do any additional setup after loading the view, typically from a nib.
         let url  = URL(string: "http://data.fixer.io/api/latest?access_key=")
         
@@ -95,6 +97,15 @@ class SavedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             }
             
         }
+    }
+    
+    
+    
+    
+    @IBAction func onLogoutButton(_ sender: Any) {
+        
+        
+        
     }
     
     
