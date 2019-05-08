@@ -36,7 +36,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     
 
     
-    @IBOutlet weak var imageView: UIImageView!
+//    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var languagePicker: UIPickerView!
     @IBOutlet weak var detectedLabel: UILabel!
     @IBOutlet weak var translatedLabel: UILabel!
@@ -48,12 +48,25 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     
     lazy var vision = Vision.vision()
     var textDetector: VisionTextDetector?
-    
+    var detectedText = ""
     let synthesizer = AVSpeechSynthesizer()
 
     
 
-    @IBAction func cameraButton(_ sender: Any) {
+//    @IBAction func cameraButton(_ sender: Any) {
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.allowsEditing = true
+//
+//        if UIImagePickerController.isSourceTypeAvailable(.camera){
+//            picker.sourceType = .camera
+//        } else {
+//            picker.sourceType = .photoLibrary
+//        }
+//        present(picker, animated: true, completion: nil)
+//
+//    }
+    @IBAction func cameraBtn(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
@@ -64,11 +77,10 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             picker.sourceType = .photoLibrary
         }
         present(picker, animated: true, completion: nil)
-        
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage
-        imageView.image = image
+//        imageView.image = image
         detectText(image: image)
         dismiss(animated: true, completion: nil)
     }
@@ -84,14 +96,13 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             
             debugPrint("Feature blocks in the image: \(features.count)")
             
-            var detectedText = ""
             for feature in features {
                 let value = feature.text
-                detectedText.append("\(value) ")
+                self.detectedText.append("\(value) ")
             }
             
-            self.detectedLabel.text = detectedText
-            self.translateText(detectedText: detectedText)
+            self.detectedLabel.text = self.detectedText
+            //self.translateText(detectedText: detectedText)
         }
     }
     
@@ -143,5 +154,10 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
             synthesizer.speak(utterance)
         }
+    }
+    
+    
+    @IBAction func onTranslate(_ sender: Any) {
+        self.translateText(detectedText: detectedText)
     }
 }
