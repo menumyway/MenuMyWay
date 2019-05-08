@@ -30,7 +30,7 @@ class GoogleTranslate : NSObject {
         urlComponents.path          = "/language/translate/v2"
         
         urlComponents.queryItems    = [
-            URLQueryItem(name: "key"  , value: "AIzaSyAKi4b2qfSwVCnjd7IshJ68KGP61Z-PZXE")
+            URLQueryItem(name: "key"  , value: "")
         ]
         
         //  Headers

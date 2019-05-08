@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		26430EA422652AAC00442A2B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26430EA322652AAC00442A2B /* SignUpViewController.swift */; };
 		26430EA622652AC100442A2B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26430EA522652AC100442A2B /* LogInViewController.swift */; };
+		2650052D2282A9D8004F00C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2650052C2282A9D7004F00C0 /* Assets.xcassets */; };
 		2696EE5722555C3C009A5860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696EE5622555C3C009A5860 /* AppDelegate.swift */; };
 		2696EE5922555C3C009A5860 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696EE5822555C3C009A5860 /* ViewController.swift */; };
 		2696EE5C22555C3C009A5860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2696EE5A22555C3C009A5860 /* Main.storyboard */; };
-		2696EE5E22555C3D009A5860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2696EE5D22555C3D009A5860 /* Assets.xcassets */; };
 		2696EE6122555C3D009A5860 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2696EE5F22555C3D009A5860 /* LaunchScreen.storyboard */; };
 		269A7ED322641F3E002A006E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 269A7ED222641F3E002A006E /* GoogleService-Info.plist */; };
 		269A7ED722641FB3002A006E /* GoogleTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269A7ED622641FB3002A006E /* GoogleTranslate.swift */; };
@@ -27,11 +27,11 @@
 		085D2155726DDBAD828E7A83 /* Pods_MenuMyWay_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MenuMyWay_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26430EA322652AAC00442A2B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		26430EA522652AC100442A2B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		2650052C2282A9D7004F00C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2696EE5322555C3C009A5860 /* MenuMyWay_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuMyWay_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2696EE5622555C3C009A5860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2696EE5822555C3C009A5860 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2696EE5B22555C3C009A5860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2696EE5D22555C3D009A5860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2696EE6022555C3D009A5860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2696EE6222555C3D009A5860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		269A7ED222641F3E002A006E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 				2696EE5822555C3C009A5860 /* ViewController.swift */,
 				2696EE5A22555C3C009A5860 /* Main.storyboard */,
 				26ACEDA52280EBDD00555217 /* homeViewController.swift */,
-				2696EE5D22555C3D009A5860 /* Assets.xcassets */,
 				2696EE5F22555C3D009A5860 /* LaunchScreen.storyboard */,
+				2650052C2282A9D7004F00C0 /* Assets.xcassets */,
 				2696EE6222555C3D009A5860 /* Info.plist */,
 				269A7ED222641F3E002A006E /* GoogleService-Info.plist */,
 				269A7ED622641FB3002A006E /* GoogleTranslate.swift */,
@@ -180,7 +180,7 @@
 			files = (
 				2696EE6122555C3D009A5860 /* LaunchScreen.storyboard in Resources */,
 				269A7ED322641F3E002A006E /* GoogleService-Info.plist in Resources */,
-				2696EE5E22555C3D009A5860 /* Assets.xcassets in Resources */,
+				2650052D2282A9D8004F00C0 /* Assets.xcassets in Resources */,
 				2696EE5C22555C3C009A5860 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
