@@ -10,6 +10,8 @@
 		26430EA422652AAC00442A2B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26430EA322652AAC00442A2B /* SignUpViewController.swift */; };
 		26430EA622652AC100442A2B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26430EA522652AC100442A2B /* LogInViewController.swift */; };
 		2650052D2282A9D8004F00C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2650052C2282A9D7004F00C0 /* Assets.xcassets */; };
+		2670586A228385A90027E8BC /* PlacesAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26705869228385A90027E8BC /* PlacesAPICaller.swift */; };
+		2670586C2283863F0027E8BC /* JsonObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670586B2283863F0027E8BC /* JsonObjects.swift */; };
 		2696EE5722555C3C009A5860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696EE5622555C3C009A5860 /* AppDelegate.swift */; };
 		2696EE5922555C3C009A5860 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696EE5822555C3C009A5860 /* ViewController.swift */; };
 		2696EE5C22555C3C009A5860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2696EE5A22555C3C009A5860 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		26430EA322652AAC00442A2B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		26430EA522652AC100442A2B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2650052C2282A9D7004F00C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26705869228385A90027E8BC /* PlacesAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAPICaller.swift; sourceTree = "<group>"; };
+		2670586B2283863F0027E8BC /* JsonObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonObjects.swift; sourceTree = "<group>"; };
 		2696EE5322555C3C009A5860 /* MenuMyWay_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuMyWay_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2696EE5622555C3C009A5860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2696EE5822555C3C009A5860 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		267058682283857F0027E8BC /* Places API */ = {
+			isa = PBXGroup;
+			children = (
+				26705869228385A90027E8BC /* PlacesAPICaller.swift */,
+				2670586B2283863F0027E8BC /* JsonObjects.swift */,
+			);
+			path = "Places API";
+			sourceTree = "<group>";
+		};
 		2696EE4A22555C3C009A5860 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +90,7 @@
 		2696EE5522555C3C009A5860 /* MenuMyWay_1 */ = {
 			isa = PBXGroup;
 			children = (
+				267058682283857F0027E8BC /* Places API */,
 				2696EE5622555C3C009A5860 /* AppDelegate.swift */,
 				2696EE5822555C3C009A5860 /* ViewController.swift */,
 				2696EE5A22555C3C009A5860 /* Main.storyboard */,
@@ -326,6 +340,8 @@
 				26ACEDA62280EBDD00555217 /* homeViewController.swift in Sources */,
 				2696EE5922555C3C009A5860 /* ViewController.swift in Sources */,
 				26430EA622652AC100442A2B /* LogInViewController.swift in Sources */,
+				2670586C2283863F0027E8BC /* JsonObjects.swift in Sources */,
+				2670586A228385A90027E8BC /* PlacesAPICaller.swift in Sources */,
 				2696EE5722555C3C009A5860 /* AppDelegate.swift in Sources */,
 				5B6E0052226534A6007EB8DA /* SavedViewController.swift in Sources */,
 				269A7ED722641FB3002A006E /* GoogleTranslate.swift in Sources */,

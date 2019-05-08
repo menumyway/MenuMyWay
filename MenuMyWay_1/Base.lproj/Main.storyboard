@@ -311,7 +311,35 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yxw-Zj-5qE">
                                 <rect key="frame" x="0.0" y="64" width="414" height="749"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77u-gH-ELX">
+                                        <rect key="frame" x="360" y="0.0" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="searchButton:" destination="TaD-Aw-aNF" eventType="touchUpInside" id="ZFb-Hg-fkQ"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0u-Nf-NEY">
+                                        <rect key="frame" x="8" y="8" width="344" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeF-Gm-Ina">
+                                        <rect key="frame" x="8" y="69" width="398" height="657"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.47843137250000001" green="0.83137254900000002" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="q9D-Lj-CNc" appends="YES" id="dLt-f5-sL3"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rko-HY-Rvv">
                                 <rect key="frame" x="139" y="41" width="54" height="21"/>
@@ -335,29 +363,22 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Uty-2X-xDy">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="5FW-4Y-Mrk"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="ICB-sq-3k8" appends="YES" id="4he-AK-5le"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icons8-search-50" selectedImage="icons8-search-50" id="0sZ-Kx-ADD"/>
                     <navigationItem key="navigationItem" title="Title" id="uXW-Wl-krh"/>
                     <connections>
-                        <outlet property="searchVenue" destination="Uty-2X-xDy" id="7TD-e9-fYf"/>
+                        <outlet property="MenuLabel" destination="QeF-Gm-Ina" id="g7Q-Kz-G2J"/>
+                        <outlet property="searchBar" destination="V0u-Nf-NEY" id="QJf-zP-d8f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPY-KZ-enu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ICB-sq-3k8">
+                <tapGestureRecognizer id="q9D-Lj-CNc">
                     <connections>
-                        <action selector="tapScreen:" destination="TaD-Aw-aNF" id="IOP-ZZ-EyO"/>
+                        <action selector="exitKeyBoard:" destination="TaD-Aw-aNF" id="PVG-LA-0ch"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
