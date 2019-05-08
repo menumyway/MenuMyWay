@@ -1,16 +1,16 @@
 //
-//  CaptureViewController.swift
+//  CameraViewController.swift
 //  MenuMyWay_1
 //
-//  Created by Celina Juarez on 4/14/19.
+//  Created by Celina Juarez on 5/7/19.
 //  Copyright © 2019 Celina. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class CaptureViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
-    
+class CameraViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -32,11 +32,18 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         languagePicker.delegate = self
     }
     
+
+    
+    
+//    @IBOutlet weak var languagePicker: UIPickerView!
+//    @IBOutlet weak var detectedLabel: UILabel!
+//    @IBOutlet weak var translatedLabel: UILabel!
+//    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var languagePicker: UIPickerView!
     @IBOutlet weak var detectedLabel: UILabel!
     @IBOutlet weak var translatedLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    
     
     let languages = ["Select a language", "French", "English", "Spanish", "German"]
     let languageCodes = ["es","fr","en","es","de"]
@@ -45,6 +52,19 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
     lazy var vision = Vision.vision()
     var textDetector: VisionTextDetector?
     
+//    @IBAction func cameraButton(_ sender: Any) {
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.allowsEditing = true
+//        
+//        if UIImagePickerController.isSourceTypeAvailable(.camera){
+//            picker.sourceType = .camera
+//        } else {
+//            picker.sourceType = .photoLibrary
+//        }
+//        present(picker, animated: true, completion: nil)
+//        
+//    }
     @IBAction func cameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -109,4 +129,14 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         
         task?.resume()
     }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
