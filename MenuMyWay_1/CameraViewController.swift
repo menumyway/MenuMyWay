@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import AVFoundation
 
 class CameraViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
 
@@ -20,6 +21,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        currentLanguage = languages[row]
         return languages[row]
     }
     
@@ -34,17 +36,12 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     
 
     
-    
-//    @IBOutlet weak var languagePicker: UIPickerView!
-//    @IBOutlet weak var detectedLabel: UILabel!
-//    @IBOutlet weak var translatedLabel: UILabel!
-//    @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var languagePicker: UIPickerView!
     @IBOutlet weak var detectedLabel: UILabel!
     @IBOutlet weak var translatedLabel: UILabel!
     
+    var currentLanguage  = ""
     let languages = ["Select a language", "French", "English", "Spanish", "German"]
     let languageCodes = ["es","fr","en","es","de"]
     var targetCode = "es"
@@ -52,19 +49,10 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     lazy var vision = Vision.vision()
     var textDetector: VisionTextDetector?
     
-//    @IBAction func cameraButton(_ sender: Any) {
-//        let picker = UIImagePickerController()
-//        picker.delegate = self
-//        picker.allowsEditing = true
-//        
-//        if UIImagePickerController.isSourceTypeAvailable(.camera){
-//            picker.sourceType = .camera
-//        } else {
-//            picker.sourceType = .photoLibrary
-//        }
-//        present(picker, animated: true, completion: nil)
-//        
-//    }
+    let synthesizer = AVSpeechSynthesizer()
+
+    
+
     @IBAction func cameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -129,14 +117,31 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         
         task?.resume()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func speakDetected(_ sender: Any) {
+        print(detectedLabel.text)
+        let utterance = AVSpeechUtterance(string: detectedLabel.text ?? "Empty")
+        utterance.rate = 0.2
+        synthesizer.speak(utterance)
     }
-    */
-
+    
+    @IBAction func speakTrans(_ sender: Any) {
+        let utterance = AVSpeechUtterance(string: translatedLabel.text ?? "Empty")
+        utterance.rate = 0.2
+        
+        if (currentLanguage == "French") {
+            utterance.voice = AVSpeechSynthesisVoice(language: "fr-FR")
+            synthesizer.speak(utterance)
+        }else if (currentLanguage == "Spanish") {
+            utterance.voice = AVSpeechSynthesisVoice(language: "es-MX")
+            synthesizer.speak(utterance)
+        }else if (currentLanguage == "German") {
+            utterance.voice = AVSpeechSynthesisVoice(language: "de-DE")
+            synthesizer.speak(utterance)
+        }else if (currentLanguage == "English") {
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            synthesizer.speak(utterance)
+        }
+    }
 }
