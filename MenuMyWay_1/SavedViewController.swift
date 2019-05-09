@@ -14,6 +14,11 @@ class SavedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return 1
     }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let changeColor = NSAttributedString(string: currencyType[row], attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        return changeColor
+    }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return currencyType.count
     }
@@ -27,6 +32,8 @@ class SavedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return currencyType[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("ROW")
+        print(row)
         if(pickerView == currencyPicker) {
             currentCurr = currencyValue[row]
         }else if(pickerView == currencyPicker2) {
