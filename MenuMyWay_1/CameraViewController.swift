@@ -19,7 +19,10 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return languages.count
     }
-    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let changeColor = NSAttributedString(string: languages[row], attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        return changeColor
+    }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         currentLanguage = languages[row]
         return languages[row]
