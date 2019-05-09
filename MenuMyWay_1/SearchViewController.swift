@@ -11,9 +11,10 @@ import CoreLocation
 import MapKit
 
 class SearchViewController: UIViewController,CLLocationManagerDelegate,UISearchBarDelegate {
+    
     //@IBOutlet weak var searchMenu: UISearchBar!
     var  menuString : String = ""
-    
+    var menus: [Menu.Item]? = nil
     @IBOutlet weak var MenuLabel: UILabel!
     
     @IBOutlet weak var searchBar: UITextField!
@@ -41,6 +42,9 @@ class SearchViewController: UIViewController,CLLocationManagerDelegate,UISearchB
     }
     
     @IBAction func searchButton(_ sender: Any) {
+        //MenuLabel.text = ""
+        var text2 = ""
+        //menus = nil
         PlacesAPICaller.venuName = searchBar.text ?? "nil"
         print("\(PlacesAPICaller.venuName)")
         PlacesAPICaller.getLocalVenus( completion: { (finished) in
@@ -56,16 +60,17 @@ class SearchViewController: UIViewController,CLLocationManagerDelegate,UISearchB
                                 PlacesAPICaller.getMenu(venue_id: id, completion: { (gotMenu, menu) in
                                     if(gotMenu){
                                         print("Total Menus: \(menu.response.menu.menus.count)")
-                                        PlacesAPICaller.printMenu(menu: menu)
+                                        //PlacesAPICaller.printMenu(menu: menu)
                                         let menu_stuff = menu.response.menu.menus.items
-                                        self.menuString = menu_stuff!.description
+                                        self.menus = menu_stuff
                                         //self.menuDetails.text = self.menuString
                                         //print(self.menuString)
                                         //counter = 2
                                     } else {
                                         print("Couldn't get menu :(")
                                         //self.menuString = "Menu not found"
-                                        self.menuString = "Menu was not found for \(PlacesAPICaller.venuName)."
+                                        
+                                        //text2 = "Menu was not found for \(String(describing: self.searchBar!.text))."
                                         //counter = 2
                                     }
                                 })
@@ -75,8 +80,30 @@ class SearchViewController: UIViewController,CLLocationManagerDelegate,UISearchB
                 }
             }
         })
-        print("________\(self.menuString)")
-        self.MenuLabel.text = self.menuString
+        if(menus != nil){
+            MenuLabel.text = ""
+            print("________\(String(describing: self.menus))")
+            for m in (self.menus)!{
+                //                self.MenuLabel.text = "\(m.entries)"
+                self.MenuLabel.text?.append(contentsOf: "\(m.name)\n")
+                for i in m.entries.items! {
+                    if(i.description != nil){
+                        self.MenuLabel.text?.append(contentsOf: "\n\(String(describing: i.description))\n")
+                    }
+                    for itemN in i.entries.items {
+                        //self.MenuLabel.text?.append(contentsOf: "\(itemN.name)\n")
+                        self.MenuLabel.text?.append(contentsOf: "\(String(describing: itemN.name))\n")
+                        if(itemN.description != nil){
+                            self.MenuLabel.text?.append(contentsOf: "\(String(describing: itemN.description!))\n")
+                        }
+                    }
+                }
+            }
+        }
+        else{
+            self.MenuLabel.text = "Menu was not found for \(PlacesAPICaller.venuName)."//" Menu was not found for \(String(describing: self.searchBar!.text) "
+        }
+    
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
