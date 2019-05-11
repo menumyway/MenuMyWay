@@ -144,7 +144,8 @@ Here's a walkthrough of implemented user stories:
 <img src='https://media.giphy.com/media/XDMAtyJ3LADpDJ6XJ8/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <img src='https://media.giphy.com/media/WQlzDbzwdnVrefrR9l/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+## Completed App
+<img src='https://media.giphy.com/media/ZBzg8hvyvN8VEHKmAD/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 
